@@ -1,4 +1,6 @@
 from tkinter import *
+from reglaCramer import cramer
+
 root = Tk()
 
 # Hijo de root, no ocurre nada
