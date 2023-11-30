@@ -17,12 +17,18 @@ def resolver_matriz():
     # Perform your matrix resolution or any other logic here
     # For demonstration, let's just print the values
     
-    cramer(matrix_values[0][0],matrix_values[0][1],matrix_values[0][2],matrix_values[1][0],matrix_values[1][1],matrix_values[1][2],matrix_values[2][0],matrix_values[2][1],matrix_values[2][2],x_value,y_value,z_value)
+    metodo_cramer = cramer(matrix_values[0][0],matrix_values[0][1],matrix_values[0][2],matrix_values[1][0],matrix_values[1][1],matrix_values[1][2],matrix_values[2][0],matrix_values[2][1],matrix_values[2][2],x_value,y_value,z_value)
+    
+    # Crea la etiqueta
+    resultado_etiqueta1 = ttk.Label(root, text=metodo_cramer[0], justify="left", anchor="w")
+    resultado_etiqueta2 = ttk.Label(root, text=metodo_cramer[1], justify="left", anchor="w")
+    resultado_etiqueta3 = ttk.Label(root, text=metodo_cramer[2], justify="left", anchor="w")
 
-    # print("Matrix Values:", matrix_values)
-    # print("X:", x_value)
-    # print("Y:", y_value)
-    # print("Z:", z_value)
+    # Coloca la etiqueta en el grid
+    resultado_etiqueta1.grid(row=0, column=6, padx=5, pady=5)
+    resultado_etiqueta2.grid(row=1, column=6, padx=5, pady=5)
+    resultado_etiqueta3.grid(row=2, column=6, padx=5, pady=5)
+
 
 # Create the main window
 root = tk.Tk()
